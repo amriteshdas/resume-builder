@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Resume Builder</h1>
+
+    <form id="resumeForm">
+      <input type="text" id="name" placeholder="Your Full Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+      <input type="text" id="location" placeholder="Location" required>
+
+      <input type="url" id="portfolio" placeholder="Portfolio Link">
+
+      <div id="education">
+        <h3>Education</h3>
+        <button type="button" id="addEducation">+ Add Education</button>
+      </div>
+      
+      <div id="experience">
+        <h3>Experience</h3>
+        <button type="button" id="addexperience">+ Add Experience</button>
+      </div>
+
+      <div id="projects">
+        <h3>Projects</h3>
+        <button type="button" id="addProject">+ Add Project</button>
+      </div>
+
+      <textarea id="skills" placeholder="Skills (e.g., HTML, CSS, JS, React)"></textarea>
+      <textarea id="extra" placeholder="Extra Curricular Activities"></textarea>
+
+      <div id="customSections">
+        <h3>Additional Sections</h3>
+        <button type="button" id="addCustomSection">+ Add Section</button>
+      </div>
+
+      <div class="button-group">
+        <button type="submit" class="btn">Generate Resume</button>
+        <button type="button" id="resetBtn" class="btn reset">Reset All</button>
+      </div>
+    </form>
+
+    <div id="resumePreview" class="resume" style="display: none;"></div>
+    <button id="downloadBtn" class="btn" style="display: none;">Download Resume</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
